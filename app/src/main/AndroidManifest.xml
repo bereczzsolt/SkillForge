@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SkillForge"
+        tools:targetApi="31" >
+        <activity
+            android:name=".informatika.InformatikaKerdesekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Aktivitik.AngolActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Aktivitik.MatematikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Aktivitik.NyelvtanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Aktivitik.InformatikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Aktivitik.IrodalomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Aktivitik.PontActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Kerdesek.TortenelemKerdesekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Kerdesek.AngolKerdesek"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Kerdesek.InformatikaKerdesek"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Kerdesek.IrodalomKerdesek"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Kerdesek.MatematikaKerdesek"
+            android:exported="false" />
+        <activity
+            android:name=".Tantargyak.Kerdesek.NyelvtanKerdesek"
+            android:exported="false" />
+        <activity
+            android:name=".Aktivitik.Temakorok"
+            android:exported="true" />
+        <activity
+            android:name=".Tantargyak.Model.TemakorModel"
+            android:exported="true" />
+        <activity
+            android:name=".Tantargyak.Aktivitik.TortenelemActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Aktivitik.KezdokepernyoActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
