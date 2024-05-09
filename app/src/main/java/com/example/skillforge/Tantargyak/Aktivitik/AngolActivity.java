@@ -24,13 +24,13 @@ public class AngolActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
 
-        list.add(new TemakorModel("Angol1"));
-        list.add(new TemakorModel("Angol2"));
-        list.add(new TemakorModel("Angol3"));
-        list.add(new TemakorModel("Angol4"));
-        list.add(new TemakorModel("Angol5"));
-        list.add(new TemakorModel("Angol6"));
-        list.add(new TemakorModel("Angol7"));
+        list.add(new TemakorModel("Angol1","Angol"));
+        list.add(new TemakorModel("Angol2","Angol"));
+        list.add(new TemakorModel("Angol3","Angol"));
+        list.add(new TemakorModel("Angol4","Angol"));
+        list.add(new TemakorModel("Angol5","Angol"));
+        list.add(new TemakorModel("Angol6","Angol"));
+        list.add(new TemakorModel("Angol7","Angol"));
 
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);

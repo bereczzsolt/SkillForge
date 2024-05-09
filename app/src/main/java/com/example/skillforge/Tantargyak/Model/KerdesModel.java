@@ -1,8 +1,8 @@
 package com.example.skillforge.Tantargyak.Model;
 
-import com.example.skillforge.Tantargyak.Kerdesek.TortenelemKerdesekActivity;
+import com.example.skillforge.Tantargyak.Kerdesek.TortenelemKerdesek;
 
-public class KerdesModel extends TortenelemKerdesekActivity {
+public class KerdesModel extends TortenelemKerdesek {
 
     public String kerdes, opcio1,opcio2,opcio3,opcio4,jovalasz;
 

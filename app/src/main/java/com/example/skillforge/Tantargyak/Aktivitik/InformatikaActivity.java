@@ -28,7 +28,7 @@ public class InformatikaActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
-
+/*
         list.add(new TemakorModel("TT"));
         list.add(new TemakorModel("Magyar államalapítás"));
         list.add(new TemakorModel("Árpád-ház"));
@@ -37,7 +37,7 @@ public class InformatikaActivity extends AppCompatActivity {
         list.add(new TemakorModel("Első Világháború"));
         list.add(new TemakorModel("Második Világháború"));
 
-
+*/
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);
 

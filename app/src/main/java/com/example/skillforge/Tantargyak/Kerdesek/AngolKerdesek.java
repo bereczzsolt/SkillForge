@@ -46,39 +46,48 @@ public class AngolKerdesek extends AppCompatActivity {
 
 
         String temanev = getIntent().getStringExtra("tema");
-        if (temanev.equals("Angol1")) {
-
-            Tema_feladat1();
-
-        } else if (temanev.equals("Angol2")) {
-            Tema_feladat2();
-
-        }else if (temanev.equals("Angol3")) {
-            Tema_feladat3();
-        }else if (temanev.equals("Angol4")) {
-            Tema_feladat4();
-        }else if (temanev.equals("Angol5")) {
-            Tema_feladat5();
-        }else if (temanev.equals("Angol6")) {
-            Tema_feladat6();
-        }else if (temanev.equals("Angol7")) {
-            Tema_feladat7();
+        if (temanev != null) {
+            switch (temanev) {
+                case "Angol1":
+                    Tema_feladat1();
+                    break;
+                case "Angol2":
+                    Tema_feladat2();
+                    break;
+                case "Angol3":
+                    Tema_feladat3();
+                    break;
+                case "Angol4":
+                    Tema_feladat4();
+                    break;
+                case "Angol5":
+                    Tema_feladat5();
+                    break;
+                case "Angol6":
+                    Tema_feladat6();
+                    break;
+                case "Angol7":
+                    Tema_feladat7();
+                    break;
+                default:
+                    // Ismeretlen téma kezelése
+                    break;
+            }
         }
 
 
-        for (int i = 0; i < 4; i++) {
 
+        for (int i = 0; i < 4 && i < list.size(); i++) {
             binding.Valaszlehetosegek.getChildAt(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     checkAnswer((Button) view);
-
-
                 }
-
             });
 
-            playAnimation(binding.feltettkerdes, 0, list.get(helyzet).getKerdes());
+            if (helyzet < list.size()) {
+                playAnimation(binding.feltettkerdes, 0, list.get(helyzet).getKerdes());
+            }
         }
 
 

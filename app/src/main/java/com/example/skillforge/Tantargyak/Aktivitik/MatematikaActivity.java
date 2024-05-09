@@ -28,14 +28,14 @@ public class MatematikaActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
-
+/*
         list.add(new TemakorModel("Hunok"));
         list.add(new TemakorModel("Magyar államalapítás"));
         list.add(new TemakorModel("Árpád-ház"));
         list.add(new TemakorModel("Hunyadiak"));
 
 
-
+*/
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);
 

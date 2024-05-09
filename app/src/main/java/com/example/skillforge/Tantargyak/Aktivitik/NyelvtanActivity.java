@@ -12,7 +12,7 @@ import com.example.skillforge.databinding.ActivityNyelvtanBinding;
 import java.util.ArrayList;
 
 public class NyelvtanActivity extends AppCompatActivity {
-
+/*
     ActivityNyelvtanBinding binding;
     ArrayList<TemakorModel> list;
 
@@ -40,4 +40,7 @@ public class NyelvtanActivity extends AppCompatActivity {
 
 
     }
+}
+
+ */
 }

@@ -28,10 +28,10 @@ public class IrodalomActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
-
+/*
         list.add(new TemakorModel("OOO"));
         list.add(new TemakorModel("Magyar államalapítás"));
-
+*/
 
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);

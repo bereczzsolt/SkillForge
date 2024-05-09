@@ -13,9 +13,6 @@
         android:theme="@style/Theme.SkillForge"
         tools:targetApi="31" >
         <activity
-            android:name=".informatika.InformatikaKerdesekActivity"
-            android:exported="false" />
-        <activity
             android:name=".Tantargyak.Aktivitik.AngolActivity"
             android:exported="false" />
         <activity
@@ -34,7 +31,7 @@
             android:name=".Aktivitik.PontActivity"
             android:exported="false" />
         <activity
-            android:name=".Tantargyak.Kerdesek.TortenelemKerdesekActivity"
+            android:name=".Tantargyak.Kerdesek.TortenelemKerdesek"
             android:exported="false" />
         <activity
             android:name=".Tantargyak.Kerdesek.AngolKerdesek"

@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Angol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AngolActivity.class);
+                startActivity(intent);
+            }
+        });
 /*
         Informatika.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,16 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Angol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AngolActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
- */
+*/
     }
 }

@@ -18,7 +18,7 @@ import com.example.skillforge.Tantargyak.Model.KerdesModel;
 import com.example.skillforge.databinding.ActivityKerdesekBinding;
 import java.util.ArrayList;
 
-public class TortenelemKerdesekActivity extends AppCompatActivity {
+public class TortenelemKerdesek extends AppCompatActivity {
     ArrayList<KerdesModel> list = new ArrayList<>();
     ActivityKerdesekBinding binding;
 
@@ -38,23 +38,38 @@ public class TortenelemKerdesekActivity extends AppCompatActivity {
         ido.start();
         // Intentből való téma kinyerés
         String temanev = getIntent().getStringExtra("tema");
-
         // A kiválasztott témának feltöltése a listából, ha a lista eleme megegyezik akkor feltölti
-        if (temanev.equals("Hunok")) {
-            Tema_Hunok();
-        } else if (temanev.equals("Magyar államalapítás")) {
-            Tema_Magyar_allamalapitas();
-        }else if (temanev.equals("Árpád-ház")) {
-            Tema_Arpad_Haz();
-        }else if (temanev.equals("Hunyadiak")) {
-            Tema_Hunyadiak();
-        }else if (temanev.equals("1956-os forradalom és szabadságharc")) {
-            Tema_1956();
-        }else if (temanev.equals("Első Világháború")) {
-            Tema_Elso_VH();
-        }else if (temanev.equals("Második Világháború")) {
-            Tema_Masodik_VH();
+
+        if (temanev != null) {
+            switch (temanev) {
+                case "Hunok":
+                    Tema_Hunok();
+                    break;
+                case "Magyar államalapítás":
+                    Tema_Magyar_allamalapitas();
+                    break;
+                case "Árpád-ház":
+                    Tema_Arpad_Haz();
+                    break;
+                case "Hunyadiak":
+                    Tema_Hunyadiak();
+                    break;
+                case "1956-os forradalom és szabadságharc":
+                    Tema_1956();
+                    break;
+                case "Első Világháború":
+                    Tema_Elso_VH();
+                    break;
+                case "Második Világháború":
+                    Tema_Masodik_VH();
+                    break;
+                default:
+                    // Ismeretlen téma kezelése
+                    break;
+            }
         }
+
+
         // Kattintásfigyelők hozzáadása a válaszlehetőségekhez
         for (int i = 0; i < 4; i++) {
 
@@ -64,6 +79,7 @@ public class TortenelemKerdesekActivity extends AppCompatActivity {
                     checkAnswer((Button) view);
                 }
             });
+
             // Animáció lejátszása a feltett kérdésre
             playAnimation(binding.feltettkerdes, 0, list.get(helyzet).getKerdes());
         }
@@ -85,7 +101,7 @@ public class TortenelemKerdesekActivity extends AppCompatActivity {
                 helyzet++;
                 if (helyzet == list.size()) {
                     // Pontok és összes kérdés átadása a PontActivity-nek
-                    Intent intent = new Intent(TortenelemKerdesekActivity.this, PontActivity.class);
+                    Intent intent = new Intent(TortenelemKerdesek.this, PontActivity.class);
                     intent.putExtra("pont", pont);
                     intent.putExtra("osszes", list.size());
                     startActivity(intent);
@@ -110,7 +126,7 @@ public class TortenelemKerdesekActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 // Lejárt idő esetén dialógus megjelenítése
-            Dialog dialog = new Dialog(TortenelemKerdesekActivity.this);
+            Dialog dialog = new Dialog(TortenelemKerdesek.this);
             dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
             dialog.setCancelable(false);
             dialog.setContentView(R.layout.lejartido);
@@ -118,7 +134,7 @@ public class TortenelemKerdesekActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Újra kezdeti a kérdésekkel
-                    Intent intent = new Intent(TortenelemKerdesekActivity.this, TortenelemKerdesekActivity.class);
+                    Intent intent = new Intent(TortenelemKerdesek.this, TortenelemKerdesek.class);
                     startActivity(intent);
                     finish();
                 }
