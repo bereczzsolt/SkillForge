@@ -9,8 +9,8 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="372dp"
-        android:layout_height="630dp"
+        android:layout_width="374dp"
+        android:layout_height="672dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textView"
-        app:layout_constraintVertical_bias="0.686">
+        app:layout_constraintVertical_bias="0.372">
 
 
         <androidx.gridlayout.widget.GridLayout
@@ -236,6 +236,39 @@
 
                 </LinearLayout>
 
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Vegyes"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="122dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/irodalomlogi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VegyesKérdések"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
         </androidx.gridlayout.widget.GridLayout>

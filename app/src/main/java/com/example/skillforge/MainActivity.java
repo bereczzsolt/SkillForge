@@ -14,10 +14,12 @@ import com.example.skillforge.Tantargyak.Aktivitik.IrodalomActivity;
 import com.example.skillforge.Tantargyak.Aktivitik.MatematikaActivity;
 import com.example.skillforge.Tantargyak.Aktivitik.NyelvtanActivity;
 import com.example.skillforge.Tantargyak.Aktivitik.TortenelemActivity;
+import com.example.skillforge.Tantargyak.Aktivitik.VegyesKerdesekActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView Tortenelem, Informatika, Irodalom, Nyelvtan, Matematika, Angol;
+    CardView Tortenelem, Informatika, Irodalom, Nyelvtan, Matematika, Angol, Vegyes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Nyelvtan = findViewById(R.id.Nyelvtan);
         Matematika = findViewById(R.id.Matematika);
         Angol = findViewById(R.id.Angol);
-
+        Vegyes = findViewById(R.id.Vegyes);
 
         Tortenelem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*
+
         Informatika.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-*/
+        Vegyes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VegyesKerdesekActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

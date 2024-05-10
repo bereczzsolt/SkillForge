@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 
+import com.example.skillforge.MainActivity;
 import com.example.skillforge.Tantargyak.Aktivitik.TortenelemActivity;
 import com.example.skillforge.databinding.ActivityPontBinding;
 
@@ -36,7 +37,7 @@ public class PontActivity extends AppCompatActivity {
         binding.ujbelijatekgomb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PontActivity.this, TortenelemActivity.class);
+                Intent intent = new Intent(PontActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -46,23 +46,34 @@ public class IrodalomKerdesek extends AppCompatActivity {
 
 
         String temanev = getIntent().getStringExtra("tema");
-        if (temanev.equals("Tura")) {
-
-            Tema_Hunok();
-
+        if (temanev != null) {
+            switch (temanev) {
+                case "Petőfi Sándor":
+                    Tema_petofi();
+                    break;
+                case "Jókai Mór":
+                    Tema_Jokai();
+                    break;
+                case "Ady Endre":
+                    Tema_Ady();
+                    break;
+                case "Kosztolányi Dezső":
+                    Tema_Kosztolanyi();
+                    break;
+                case "Móricz Zsigmond":
+                    Tema_Moricz();
+                    break;
+                case "Karinthy Frigyes":
+                    Tema_Karinthy();
+                    break;
+                case "Szabó Magda ":
+                    Tema_Szabo();
+                    break;
+                default:
+                    // Ismeretlen téma kezelése
+                    break;
+            }
         }
-        else if (temanev.equals("Árpád-ház")) {
-            Tema_Arpad_Haz();
-        }else if (temanev.equals("Hunyadiak")) {
-            Tema_Hunyadiak();
-        }else if (temanev.equals("1956-os forradalom és szabadságharc")) {
-            Tema_1956();
-        }else if (temanev.equals("Első Világháború")) {
-            Tema_Elso_VH();
-        }else if (temanev.equals("Második Világháború")) {
-            Tema_Masodik_VH();
-        }
-
 
 
         playAnimation(binding.feltettkerdes, 0, list.get(helyzet).getKerdes());
@@ -241,247 +252,232 @@ public class IrodalomKerdesek extends AppCompatActivity {
             }
         }
     }
-    private void Tema_Masodik_VH() {
-        list.add(new KerdesModel("Mikor kezdődött a második világháború?",
-                "1939-ben", "1941-ben", "1943-ban", "1945-ben", "1939-ben"));
-        list.add(new KerdesModel("Mi volt az Egyesült Államok hivatalos bekapcsolódási dátuma a második világháborúba?",
-                "1941. december 7.", "1942. szeptember 1.", "1944. június 6.", "1945. május 8.", "1941. december 7."));
-        list.add(new KerdesModel("Melyik évben zajlott a d-day, a normandiai partraszállás?",
-                "1944-ben", "1942-ben", "1943-ban", "1945-ben", "1944-ben"));
-        list.add(new KerdesModel("Ki volt az Egyesült Királyság miniszterelnöke a második világháború alatt?",
-                "Winston Churchill", "Neville Chamberlain", "Clement Attlee", "Stanley Baldwin", "Winston Churchill"));
-        list.add(new KerdesModel("Melyik évben esett el Berlin a második világháborúban?",
-                "1945-ben", "1942-ben", "1944-ben", "1946-ban", "1945-ben"));
-        list.add(new KerdesModel("Mi volt a második világháború leghosszabb csatája?",
-                "A sztálingrádi csata", "A normandiai partraszállás", "A leningrádi blokád", "A kínai harctér", "A sztálingrádi csata"));
-        list.add(new KerdesModel("Ki volt a harmadik birodalom vezetője a második világháború alatt?",
-                "Adolf Hitler", "Joseph Stalin", "Benito Mussolini", "Hirohito", "Adolf Hitler"));
-        list.add(new KerdesModel("Melyik évben kapott Truman elnök jóváhagyást az atombomba ledobására?",
-                "1945-ben", "1943-ban", "1944-ben", "1946-ban", "1945-ben"));
-        list.add(new KerdesModel("Melyik évben kapitulált a japán hadsereg a második világháborúban?",
-                "1945-ben", "1942-ben", "1944-ben", "1946-ban", "1945-ben"));
-        list.add(new KerdesModel("Mi volt a második világháború keleti frontjának legnagyobb csatája?",
-                "Kurszki csata", "Leningrádi csata", "Szovjet-offenzíva", "El-Alamein csata", "Kurszki csata"));
-        list.add(new KerdesModel("Melyik évben írták alá a második világháború véget jelentő békeszerződést?",
-                "1945-ben", "1942-ben", "1944-ben", "1946-ban", "1945-ben"));
-        list.add(new KerdesModel("Melyik évben tört ki a második világháború csendesebb időszaka, ismert mint a Phoney War?",
-                "1939-ben", "1940-ben", "1941-ben", "1938-ban", "1939-ben"));
-        list.add(new KerdesModel("Ki volt az Amerikai Egyesült Államok elnöke a második világháború alatt?",
-                "Franklin D. Roosevelt", "Harry S. Truman", "Dwight D. Eisenhower", "John F. Kennedy", "Franklin D. Roosevelt"));
-        list.add(new KerdesModel("Melyik évben tört ki a második világháború európai hadszínterén az éles harcok sorozata?",
-                "1939-ben", "1940-ben", "1941-ben", "1942-ben", "1939-ben"));
-        list.add(new KerdesModel("Hány évig tartott a második világháború?",
-                "6 év", "5 év", "4 év", "7 év", "6 év"));
+    private void Tema_Szabo() {
+        list.add(new KerdesModel("Mikor született Szabó Magda?",
+                "1917-ben", "1920-ban", "1923-ban", "1925-ben", "1917-ben"));
+        list.add(new KerdesModel("Melyik volt Szabó Magda első regénye?",
+                "Freskó", "Abigél", "Az ajtó", "Régimódi történet", "Freskó"));
+        list.add(new KerdesModel("Melyik művéért kapott Szabó Magda Kossuth-díjat?",
+                "Az ajtó", "Abigél", "Régimódi történet", "Für Elise", "Für Elise"));
+        list.add(new KerdesModel("Mi volt Szabó Magda egyik legismertebb regénye, amelyből később film is készült?",
+                "Az ajtó", "Abigél", "Freskó", "Régimódi történet", "Az ajtó"));
+        list.add(new KerdesModel("Melyik Szabó Magda regény alapján készült Jancsó Miklós azonos című filmje?",
+                "Az ajtó", "Abigél", "Freskó", "Régimódi történet", "Az ajtó"));
+        list.add(new KerdesModel("Melyik Szabó Magda műve játszódik egy budapesti gimnáziumban az 1950-es években?",
+                "Az őz", "Régimódi történet", "Abigél", "Az ajtó", "Abigél"));
+        list.add(new KerdesModel("Melyik Szabó Magda regénye szól egy házasságról, amely a világháború előtt és után zajlik?",
+                "Für Elise", "Az ajtó", "Régimódi történet", "Abigél", "Für Elise"));
+        list.add(new KerdesModel("Melyik Szabó Magda művének címe a következő: 'A pillanat éve'?",
+                "Az ajtó", "Abigél", "Az őz", "A pillanat éve", "A pillanat éve"));
+        list.add(new KerdesModel("Melyik Szabó Magda regényében követjük bevezetődését Bözsi nénihez, aki a bárt mondja el a történetet?",
+                "Az őz", "Az ajtó", "Für Elise", "Abigél", "Für Elise"));
+        list.add(new KerdesModel("Melyik Szabó Magda műveiben fedezhetjük fel az anyaság, a női identitás és az önérvényesítés témáit?",
+                "Freskó", "Az ajtó", "Régimódi történet", "Abigél", "Abigél"));
+        list.add(new KerdesModel("Melyik Szabó Magda regény története köré épül a kérdés, hogy ki a felelős egy csecsemő haláláért?",
+                "Régimódi történet", "Az ajtó", "Für Elise", "Abigél", "Régimódi történet"));
+        list.add(new KerdesModel("Melyik Szabó Magda műve egy házasság meghatározó pillanatairól szól?",
+                "Az ajtó", "Az őz", "Abigél", "Für Elise", "Az ajtó"));
+        list.add(new KerdesModel("Melyik Szabó Magda regény főszereplője Zsófi, aki a lányát a nevelőintézetbe helyezi?",
+                "Az ajtó", "Az őz", "Für Elise", "Régimódi történet", "Az ajtó"));
+        list.add(new KerdesModel("Melyik Szabó Magda regényében találkozhatunk a Nagy Lajos gimnáziummal?",
+                "Abigél", "Az őz", "Az ajtó", "Für Elise", "Abigél"));
+        list.add(new KerdesModel("Melyik Szabó Magda regényében találkozhatunk a Füst Milán Általános iskolával?",
+                "Régimódi történet", "Az ajtó", "Für Elise", "Az őz", "Régimódi történet"));
+    }
+    private void Tema_Karinthy() {
+        list.add(new KerdesModel("Mikor született Karinthy Frigyes?",
+                "1887-ben", "1892-ben", "1894-ben", "1900-ban", "1887-ben"));
+        list.add(new KerdesModel("Melyik volt Karinthy Frigyes első regénye?",
+                "Tanár úr kérem", "Utazás Faremidóba", "A cirkusz", "Capillária", "Tanár úr kérem"));
+        list.add(new KerdesModel("Melyik művéért kapott Karinthy Frigyes Baumgarten-díjat?",
+                "Utazás Faremidóba", "Capillária", "A cirkusz", "Tanár úr kérem", "Utazás Faremidóba"));
+        list.add(new KerdesModel("Mi volt Karinthy Frigyes egyik legismertebb műve, amelyből később film is készült?",
+                "Tanár úr kérem", "Utazás Faremidóba", "Capillária", "A cirkusz", "Tanár úr kérem"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes mű alapján készült Dargay Attila azonos című animációs filmje?",
+                "Utazás Faremidóba", "Tanár úr kérem", "Capillária", "A cirkusz", "Utazás Faremidóba"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes műve játszódik egy különös szigeten, ahol különös állatok élnek?",
+                "Utazás Faremidóba", "A cirkusz", "Tanár úr kérem", "Capillária", "Utazás Faremidóba"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes regénye szól egy budapesti gimnáziumról és az ott tanuló diákokról?",
+                "Tanár úr kérem", "A cirkusz", "Utazás Faremidóba", "Capillária", "Tanár úr kérem"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes művének címe a következő: 'Útkeresés otthon és vidéken'?",
+                "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária", "A cirkusz"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes regényében találkozhatunk az álarcos költő, Léda, és a híres cirkusz arénájával?",
+                "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária", "A cirkusz"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes műveiben találkozhatunk az abszurd humorral és a filozofikus gondolatokkal?",
+                "Capillária", "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes regény története köré épül az emberi létezés és a halál filozofikus kérdése?",
+                "Capillária", "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes műve egy társasjáték különös szabályaival?",
+                "Capillária", "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes regény főszereplője szereplője keresi a világ legkülönösebb betegségét?",
+                "Capillária", "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária"));
+        list.add(new KerdesModel("Melyik Karinthy Frigyes regényében találkozhatunk a két alapvető társasjátékkal, a shatranjjal és a goval?",
+                "Capillária", "A cirkusz", "Utazás Faremidóba", "Tanár úr kérem", "Capillária"));
+    }
+    private void Tema_Moricz() {
+        list.add(new KerdesModel("Mikor született Móricz Zsigmond?",
+                "1879-ben", "1880-ban", "1881-ben", "1882-ben", "1879-ben"));
+        list.add(new KerdesModel("Melyik volt Móricz Zsigmond első regénye?",
+                "Rokonok", "Légy jó mindhalálig", "Sárarany", "Egy polgár vallomásai", "Rokonok"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond műve alapján készült Jancsó Miklós azonos című filmje?",
+                "Sárarany", "Légy jó mindhalálig", "Rokonok", "Egy polgár vallomásai", "Légy jó mindhalálig"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond regénye játszódik a 19. század végén, ahol a magyar alföld parasztvilágát mutatja be?",
+                "Rokonok", "Sárarany", "Légy jó mindhalálig", "Egy polgár vallomásai", "Rokonok"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond művében találkozhatunk a főszereplővel, Gábor átka karakterrel?",
+                "Sárarany", "Rokonok", "Légy jó mindhalálig", "Egy polgár vallomásai", "Sárarany"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond regényében találkozhatunk egy polgár hiteles önéletrajzával?",
+                "Egy polgár vallomásai", "Sárarany", "Rokonok", "Légy jó mindhalálig", "Egy polgár vallomásai"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond művében találkozhatunk egy fiatal fiúvel, aki az anyagi világból kilépve kereste önmagát?",
+                "Rokonok", "Egy polgár vallomásai", "Légy jó mindhalálig", "Sárarany", "Légy jó mindhalálig"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond regénye szól egy török kori történelmi téma feldolgozásáról?",
+                "Egy polgár vallomásai", "Sárarany", "Légy jó mindhalálig", "Rokonok", "Egy polgár vallomásai"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond regényében találkozhatunk a hős Kaposvárott, akinek az életébe belekontárkodik egy titokzatos idegen?",
+                "Sárarany", "Rokonok", "Légy jó mindhalálig", "Egy polgár vallomásai", "Sárarany"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond művében találkozhatunk a főszereplővel, aki lóversenyen gazdagodik meg?",
+                "Légy jó mindhalálig", "Rokonok", "Sárarany", "Egy polgár vallomásai", "Légy jó mindhalálig"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond regényében találkozhatunk egy parasztcsaláddal, akik nagyratörő álmokat dédelgetnek?",
+                "Légy jó mindhalálig", "Rokonok", "Sárarany", "Egy polgár vallomásai", "Légy jó mindhalálig"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond művében találkozhatunk a főszereplővel, aki a visszaélések, becstelenségek árnyékában próbál meg boldogulni?",
+                "Egy polgár vallomásai", "Rokonok", "Sárarany", "Légy jó mindhalálig", "Egy polgár vallomásai"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond regényében találkozhatunk a főszereplővel, aki a bűnösök megbüntetésére vállalkozik?",
+                "Egy polgár vallomásai", "Rokonok", "Sárarany", "Légy jó mindhalálig", "Egy polgár vallomásai"));
+        list.add(new KerdesModel("Melyik Móricz Zsigmond művében találkozhatunk a főszereplővel, aki a végletekig becsületes és tisztességes?",
+                "Egy polgár vallomásai", "Rokonok", "Sárarany", "Légy jó mindhalálig", "Egy polgár vallomásai"));
+        list.add(new KerdesModel("Melyik Moricz Zsigmond regényében találkozhatunk a főszereplővel, aki egy nagyvárosban, Budapest utcáin keresi boldogságát?",
+                "Egy polgár vallomásai", "Rokonok", "Sárarany", "Légy jó mindhalálig", "Egy polgár vallomásai"));
 
     }
 
-    private void Tema_Elso_VH() {
-
-        list.add(new KerdesModel("Mikor kezdődött az első világháború?",
-                "1914-ben", "1916-ban", "1918-ban", "1920-ban", "1914-ben"));
-        list.add(new KerdesModel("Mi volt az első világháború kirobbanásának közvetlen oka?",
-                "Franciaország inváziója Belgrádba", "Osztrák-Magyar Monarchia hadüzenete Szerbiának",
-                "Az Egyesült Államok csatlakozása a háborúhoz", "Németország támadása Belgiumon keresztül",
-                "Osztrák-Magyar Monarchia hadüzenete Szerbiának"));
-        list.add(new KerdesModel("Mi volt az első világháború egyik hírhedt csatatere Franciaország és Németország között?",
-                "Verdun", "Somme", "Ypres", "Marne", "Verdun"));
-        list.add(new KerdesModel("Melyik ország lépett ki először az első világháborúból 1917-ben?",
-                "Németország", "Ausztria-Magyar Monarchia", "Oroszország", "Olaszország", "Oroszország"));
-        list.add(new KerdesModel("Ki volt Németország császára az első világháború idején?",
-                "II. Vilmos", "I. Ferenc József", "II. Miklós", "V. György", "II. Vilmos"));
-        list.add(new KerdesModel("Melyik évben tört ki az első világháborúban az ún. Osztrák-Szerb háború?",
-                "1914-ben", "1916-ban", "1918-ban", "1920-ban", "1914-ben"));
-        list.add(new KerdesModel("Mi volt az első világháború legnagyobb tengeralattjáró-hadműveletének neve?",
-                "Zimmermann-ügy", "Schlieffen-terv", "Lusitania incidens", "Gallipoli-csatlakozás", "Zimmermann-ügy"));
-        list.add(new KerdesModel("Melyik évben csatlakozott az Egyesült Államok az első világháborúhoz?",
-                "1914-ben", "1916-ban", "1917-ben", "1918-ban", "1917-ben"));
-        list.add(new KerdesModel("Melyik ország vezetője írta alá a Brest-Litovszki békeszerződést Németországgal?",
-                "Oroszország", "Németország", "Ausztria-Magyar Monarchia", "Törökország", "Oroszország"));
-        list.add(new KerdesModel("Hogyan nevezték az első világháború során azokat az árkokat, amelyekben a katonák harcoltak?",
-                "Tűzvonal", "Körbevett városok", "Hídfőállások", "Névtelen sírok", "Tűzvonal"));
-        list.add(new KerdesModel("Melyik évben tört ki az első világháborúban az ún. Tengeri csata Jütlandnál?",
-                "1914-ben", "1916-ban", "1918-ban", "1920-ban", "1916-ban"));
-        list.add(new KerdesModel("Ki volt az első világháborúban a legnagyobb központi hatalom?",
-                "Németország", "Osztrák-Magyar Monarchia", "Olaszország", "Törökország", "Németország"));
-        list.add(new KerdesModel("Melyik esemény váltotta ki az Egyesült Államok bevonulását az első világháborúba?",
-                "Pearl Harbor támadás", "Lusitania elsüllyesztése", "Hindenburg Line áttörése", "Schlieffen-terv végrehajtása",
-                "Lusitania elsüllyesztése"));
-        list.add(new KerdesModel("Melyik ország lépett ki az első világháborúból a legkésőbb?",
-                "Németország", "Ausztria-Magyar Monarchia", "Oroszország", "Olaszország", "Németország"));
-        list.add(new KerdesModel("Melyik ország volt az első világháború legnagyobb háromszövetségese?",
-                "Németország", "Oroszország", "Franciaország", "Olaszország", "Németország"));
+    private void Tema_Kosztolanyi() {
+        list.add(new KerdesModel("Mikor született Kosztolányi Dezső?",
+                "1885-ben", "1887-ben", "1889-ben", "1891-ben", "1885-ben"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében találkozhatunk a híres hosszú monológjával, melyben főszereplőjének lelki vívódásait követhetjük nyomon?",
+                "Esti Kornél", "Pacsirta", "Nero", "Aranka", "Esti Kornél"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső műve a legismertebb gyermekversek közé tartozik, melyeket édesanyjának írt?",
+                "Lengyelország", "Halottak napi nóták", "Esti Kornél", "Tótágas", "Lengyelország"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső regényében követhetjük nyomon az első világháború kegyetlen valóságát, valamint a háború előtti időszak pesti bohém életét?",
+                "Pacsirta", "Aranka", "Esti Kornél", "Nero", "Pacsirta"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében olvashatjuk az „Isten és ember” című verset?",
+                "Aranka", "Esti Kornél", "Pacsirta", "Nero", "Aranka"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső regényében követhetjük a főszereplő, aki nem éli túl a századfordulót, életét és halálát?",
+                "Nero", "Aranka", "Esti Kornél", "Pacsirta", "Nero"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében találkozhatunk az énekes lúddal és seregélygel, akik elindulnak, hogy megtalálják az élet értelmét?",
+                "Esti Kornél", "Pacsirta", "Nero", "Halottak napi nóták", "Esti Kornél"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében olvashatjuk az „Esti Dal” című verset?",
+                "Pacsirta", "Esti Kornél", "Nero", "Halottak napi nóták", "Pacsirta"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső regényében követhetjük egy ifjú festő sorsát, aki a nagyvilágba indul, hogy híres művész legyen?",
+                "Halottak napi nóták", "Esti Kornél", "Nero", "Pacsirta", "Halottak napi nóták"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében találkozhatunk egy kisfiúval, aki mindenre kíváncsi és mindent tudni akar?",
+                "Tótágas", "Pacsirta", "Esti Kornél", "Halottak napi nóták", "Tótágas"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében találkozhatunk egy éjszakai fuvarral, amelyen egy fiatalasszony és egy taxis beszélgetése áll a középpontban?",
+                "Aranka", "Nero", "Esti Kornél", "Halottak napi nóták", "Aranka"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső regényében olvashatjuk a főszereplő életének teljes krónikáját, beleértve az egész életében hozott döntéseket és azok következményeit?",
+                "Aranka", "Nero", "Pacsirta", "Esti Kornél", "Aranka"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső művében találkozhatunk egy fiatalemberrel, aki váratlanul meghal és utazásra indul az éj sötétjében?",
+                "Esti Kornél", "Pacsirta", "Aranka", "Nero", "Esti Kornél"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső regényében olvashatjuk a főszereplő, a híres költő összetört szívét, és élete utolsó pillanatait?",
+                "Pacsirta", "Nero", "Esti Kornél", "Aranka", "Pacsirta"));
+        list.add(new KerdesModel("Melyik Kosztolányi Dezső regényében olvashatjuk a főszereplő, aki egy budapesti csendőrőrsön dolgozik, és egy éjszaka során váratlan események sora zavarja meg a nyugalmat?",
+                "Skylark", "Esti Kornél", "Pacsirta", "Nero", "Skylark"));
     }
 
-    private void Tema_1956() {
+    private void Tema_Ady() {
+        list.add(new KerdesModel("Mely évben született Ady Endre?",
+                "1877-ben", "1887-ben", "1897-ben", "1907-ben", "1877-ben"));
+        list.add(new KerdesModel("Mi volt Ady Endre születési neve?",
+                "Ady András", "Ady Mihály", "Ady Endre", "Ady Gyula", "Ady András"));
+        list.add(new KerdesModel("Melyik Ady Endre költői művében található a \"Zajos örömök örök tava\" kifejezés?",
+                "Uramisten", "Az Illés szekerén", "Az én regényem", "Az elveszett alkotmány", "Uramisten"));
+        list.add(new KerdesModel("Melyik Ady Endre költeménye egyúttal nevét is viseli?",
+                "Az Illés szekerén", "Uramisten", "Az én regényem", "Az elveszett alkotmány", "Az Illés szekerén"));
+        list.add(new KerdesModel("Melyik Ady Endre versében található a \"jajgatnak az ezer meg ezer élet-öregek\" sor?",
+                "Az elveszett alkotmány", "Az Illés szekerén", "Uramisten", "Az én regényem", "Az elveszett alkotmány"));
+        list.add(new KerdesModel("Melyik Ady Endre költeményében szerepel a \"szívemet mindig hazugság terheli\" sor?",
+                "Az én regényem", "Az elveszett alkotmány", "Az Illés szekerén", "Uramisten", "Az én regényem"));
+        list.add(new KerdesModel("Melyik Ady Endre műve jelent meg 1907-ben, és sokak szerint a modern magyar költészet kezdetét jelenti?",
+                "Új versek", "Versek", "Az én regényem", "Az elveszett alkotmány", "Új versek"));
+        list.add(new KerdesModel("Melyik Ady Endre versében olvasható a „nagy fehér folyó, a férfiszív” sor?",
+                "Az én regényem", "Az elveszett alkotmány", "Az Illés szekerén", "Uramisten", "Az én regényem"));
+        list.add(new KerdesModel("Melyik Ady Endre költeményében található a „hétköznapok királya” kifejezés?",
+                "Az én regényem", "Az elveszett alkotmány", "Az Illés szekerén", "Uramisten", "Az én regényem"));
+        list.add(new KerdesModel("Melyik Ady Endre műve adott nevet a „kék könyv”-nek?",
+                "Az elveszett alkotmány", "Az én regényem", "Az Illés szekerén", "Uramisten", "Az elveszett alkotmány"));
+        list.add(new KerdesModel("Melyik Ady Endre versében olvasható a „nem tudom, hol vagy, de mindenütt vagyok” sor?",
+                "Az elveszett alkotmány", "Az én regényem", "Az Illés szekerén", "Uramisten", "Az elveszett alkotmány"));
+        list.add(new KerdesModel("Melyik Ady Endre költeményében található a „Nem én lőttem elsőnek” sor?",
+                "Az elveszett alkotmány", "Az én regényem", "Az Illés szekerén", "Uramisten", "Az elveszett alkotmány"));
+        list.add(new KerdesModel("Melyik Ady Endre versében olvasható a „fűzfák susognak az út mentén” sor?",
+                "Az elveszett alkotmány", "Az én regényem", "Az Illés szekerén", "Uramisten", "Az elveszett alkotmány"));
+        list.add(new KerdesModel("Melyik Ady Endre költeményében található a „győzelem, mely alattad csukódik be minden nagy ablak” sor?",
+                "Az elveszett alkotmány", "Az én regényem", "Az Illés szekerén", "Uramisten", "Az elveszett alkotmány"));
+        list.add(new KerdesModel("Melyik Ady Endre versében található a „fekete gyászfolt az alkonyi égen” sor?",
+                "Az elveszett alkotmány", "Az én regényem", "Az Illés szekerén", "Uramisten", "Az elveszett alkotmány"));
 
-        list.add(new KerdesModel("Mikor és hol kezdődött az 1956-os forradalom?",
-                "1956-ban, Budapesten", "1954-ben, Debrecenben", "1958-ban, Szegeden", "1960-ban, Pécsen", "1956-ban, Budapesten"));
-        list.add(new KerdesModel("Melyik esemény váltotta ki az 1956-os forradalmat?",
-                "A magyar diákok felkelése", "A lengyel szolidaritási mozgalom", "A kommunista vezetés megszorító intézkedései", "Az orosz támadás a magyar határokon", "A kommunista vezetés megszorító intézkedései"));
-        list.add(new KerdesModel("Ki volt az 1956-os forradalom egyik vezető alakja?",
-                "Imre Nagy", "Mátyás Rákosi", "János Kádár", "Ferenc Münnich", "Imre Nagy"));
-        list.add(new KerdesModel("Milyen beavatkozást hajtott végre a Szovjetunió az 1956-os forradalom leverése érdekében?",
-                "Katonai intervenciót", "Gazdasági segítséget", "Politikai tárgyalásokat", "Diplomatikus feszültségeket", "Katonai intervenciót"));
-        list.add(new KerdesModel("Milyen volt az 1956-os forradalom végeredménye?",
-                "A szovjetek visszavonultak, és demokratikus kormány alakult", "A forradalom leverése és a szovjet megszállás", "Teljes függetlenség az országnak", "Köztársasági rendszer visszaállítása", "A forradalom leverése és a szovjet megszállás"));
-        list.add(new KerdesModel("Mi volt az 1956-os forradalom jelmondata?",
-                "Éljen a szabadság!", "Éljen a kommunizmus!", "Éljen a diktatúra!", "Éljen a béke!", "Éljen a szabadság!"));
-        list.add(new KerdesModel("Melyik ország támogatta az 1956-os magyar forradalmat?",
-                "Egyesült Államok", "Szovjetunió", "Németország", "Franciaország", "Egyesült Államok"));
-        list.add(new KerdesModel("Mi volt az 1956-os forradalom célja a magyarok részéről?",
-                "Függetlenség, demokrácia, szabadság", "Abszolutizmus visszaállítása", "Kommunizmus erősítése", "Monarchia visszaállítása", "Függetlenség, demokrácia, szabadság"));
-        list.add(new KerdesModel("Hány napon át tartott az 1956-os forradalom?",
-                "Körülbelül két hétig", "Három hónapig", "Egy hónapig", "Négy napig", "Körülbelül két hétig"));
-        list.add(new KerdesModel("Mi volt az 1956-os forradalom kezdeti célja?",
-                "Békés demonstrációk az orosz megszállás ellen", "Teljes függetlenség az országnak", "A kommunista vezetők lemondása", "A szovjetek kivonulása Magyarországról", "Békés demonstrációk az orosz megszállás ellen"));
-        list.add(new KerdesModel("Melyik nap kezdődött az 1956-os forradalom?",
-                "Október 23.", "November 4.", "December 25.", "Szeptember 15.", "Október 23."));
-        list.add(new KerdesModel("Ki volt az 1956-os forradalom során a magyar miniszterelnök?",
-                "Imre Nagy", "János Kádár", "Mátyás Rákosi", "Ferenc Münnich", "Imre Nagy"));
-        list.add(new KerdesModel("Melyik évben volt az 1956-os forradalom?",
-                "1956-ban", "1954-ben", "1958-ban", "1960-ban", "1956-ban"));
-        list.add(new KerdesModel("Melyik ország segített Magyarországnak az 1956-os forradalomban?",
-                "Nem szállt be segítségül más ország", "Egyesült Államok", "Németország", "Szovjetunió", "Nem szállt be segítségül más ország"));
-        list.add(new KerdesModel("Mi volt az 1956-os forradalom fő oka?",
-                "Nemzeti szabadságharc a kommunista diktatúra ellen", "A gazdasági válság", "Nemzeti összetartás erősítése", "A politikai elnyomás megszüntetése", "Nemzeti szabadságharc a kommunista diktatúra ellen"));
-        list.add(new KerdesModel("Melyik évben oszlatták fel az 1956-os forradalmat a Szovjetunió csapatai?",
-                "1956-ban", "1957-ben", "1958-ban", "1959-ben", "1956-ban"));
     }
-
-    private void Tema_Hunyadiak() {
-        list.add(new KerdesModel("Ki volt Hunyadi János apja?",
-                "Hunyadi Mátyás", "Hunyadi János", "Hunyadi László", "Hunyadi Péter", "Hunyadi Mátyás"));
-        list.add(new KerdesModel("Melyik történelmi csata tette híressé Hunyadi Jánost?",
-                "Mohaicsata", "Lepantói csata", "Hastingsi csata", "Lengyelországi csata", "Mohaicsata"));
-        list.add(new KerdesModel("Melyik evangélikus naptárban ünnepeljük Hunyadi Mátyás napját?",
-                "Április 24.", "Február 14.", "Június 12.", "Augusztus 20.", "Április 24."));
-        list.add(new KerdesModel("Hol született Hunyadi János?",
-                "Hunyad vára", "Buda", "Kolozsvár", "Esztergom", "Hunyad vára"));
-        list.add(new KerdesModel("Hány évig volt Hunyadi János nádor?",
-                "8 évig", "10 évig", "12 évig", "15 évig", "10 évig"));
-        list.add(new KerdesModel("Ki volt Hunyadi Mátyás édesanyja?",
-                "Szilágyi Erzsébet", "Katalin", "Ilona", "Hedvig", "Szilágyi Erzsébet"));
-        list.add(new KerdesModel("Melyik ország királyaként ismerték el Hunyadi Jánost?",
-                "Szerbia", "Horvátország", "Lengyelország", "Magyarország", "Szerbia"));
-        list.add(new KerdesModel("Hunyadi János melyik évben hunyt el?",
-                "1456-ban", "1460-ban", "1470-ben", "1475-ben", "1456-ban"));
-        list.add(new KerdesModel("Hunyadi Mátyás melyik évben lett Magyarország királya?",
-                "1458-ban", "1460-ban", "1464-ben", "1467-ben", "1458-ban"));
-        list.add(new KerdesModel("Ki volt Hunyadi Mátyás felesége?",
-                "Beatrix", "Erzsébet", "Katalin", "Anna", "Beatrix"));
-        list.add(new KerdesModel("Melyik város volt Hunyadi János szülőhelye?",
-                "Kolozsvár", "Buda", "Esztergom", "Pécs", "Kolozsvár"));
-        list.add(new KerdesModel("Melyik csatában szenvedett súlyos vereséget a török sereg Hunyadi Mátyás vezetése alatt?",
-                "Kenyérmezei csata", "Mohaicsata", "Belgrádi csata", "Végvár csata", "Mohaicsata"));
-        list.add(new KerdesModel("Ki volt Hunyadi László?",
-                "Hunyadi Mátyás testvére", "Hunyadi János fia", "Hunyadi Mátyás unokája", "Hunyadi János testvére", "Hunyadi Mátyás testvére"));
-        list.add(new KerdesModel("Melyik uralkodó hívta vissza Hunyadi Mátyást a török elleni hadjáratból?",
-                "II. Ulászló", "III. Béla", "IV. Lajos", "V. István", "II. Ulászló"));
-        list.add(new KerdesModel("Hunyadi János melyik címmel vált ismertté a történelemben?",
-                "Hunyadiak fejedelme", "Törökverő János", "Mohaicsata hőse", "Fehér János", "Törökverő János"));
+    private void Tema_Jokai() {
+        list.add(new KerdesModel("Mely évben született Jókai Mór?",
+                "1825-ben", "1835-ben", "1845-ben", "1855-ben", "1825-ben"));
+        list.add(new KerdesModel("Melyik magyar író volt az 1848-as forradalom és szabadságharc alatt a legnépszerűbb szerző?",
+                "Jókai Mór", "Arany János", "Petőfi Sándor", "Vörösmarty Mihály", "Jókai Mór"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk a Kalapos úrral?",
+                "Az arany ember", "Egy magyar nábob", "Fekete gyémántok", "A kőszívű ember fiai", "Az arany ember"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk Baradlay Károllyal és Ráday Mihállyal?",
+                "Az arany ember", "Egy magyar nábob", "Fekete gyémántok", "A kőszívű ember fiai", "Az arany ember"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényének főszereplője a címben is szerepel, és \"doboz nélküli kalapos\"?",
+                "A dobzse", "Egy magyar nábob", "Fekete gyémántok", "A kőszívű ember fiai", "A dobzse"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy álmokkal és víziókkal teli kastéllyal, és az azon belüli összeesküvésekkel?",
+                "Fekete gyémántok", "Az arany ember", "Egy magyar nábob", "A kőszívű ember fiai", "Fekete gyémántok"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk a „vöröskirályné” által vezetett asszonyi csapatokkal?",
+                "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai", "Az arany ember"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy vörösruhás rejtélyes asszonnyal, aki a végsőkig titkolja kilétét?",
+                "A kőszívű ember fiai", "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében játszódik a történet az 1848-49-es forradalom idején, és egy ifjú lovag fogságának és kalandjainak leírásával indul?",
+                "A kőszívű ember fiai", "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy szegény, de jószívű ifjúval, aki felfedez egy hatalmas kincset, de annak megszerzése nem megy könnyen?",
+                "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai", "Az arany ember"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében játszódik a történet egy betyárbanda és egy árva fiú kalandjainak megírásával?",
+                "Egy magyar nábob", "Az arany ember", "Fekete gyémántok", "A kőszívű ember fiai", "Egy magyar nábob"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy nyomorult nemesemberrel, aki feleségével és leányával együtt egy egész falu lakosságát terhesíti meg a félelemmel?",
+                "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai", "Fekete gyémántok"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy jóakaró özvegyasszonnyal, aki meghaladja korát, és az igazságosságért és a jó cselekedetekért küzd?",
+                "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai", "Az arany ember"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy fiatal nővel, aki egy titokzatos kék szemű férfitól kapott levelet visz vissza a valóságba?",
+                "Az arany ember", "Fekete gyémántok", "Egy magyar nábob", "A kőszívű ember fiai", "Az arany ember"));
+        list.add(new KerdesModel("Melyik Jókai Mór regényében találkozhatunk egy ifjú nővel, aki egy aranyalakot keresve vesz részt egy titokzatos kalandban?",
+                "Fekete gyémántok", "Az arany ember", "Egy magyar nábob", "A kőszívű ember fiai", "Fekete gyémántok"));
 
     }
 
-    private void Tema_Arpad_Haz() {
-        list.add(new KerdesModel("Ki volt az Árpád-ház alapítója?",
-                "Álmos", "Árpád", "Koppány", "Lehel", "Árpád"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó neve kapcsolódik a Képes Krónikához?",
-                "Szent István", "Szent László", "Könyves Kálmán", "Nagy Lajos", "Szent László"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó neve kapcsolódik az Aranybulla kiadásához?",
-                "II. András", "II. Béla", "IV. Béla", "I. Károly", "II. Béla"));
-        list.add(new KerdesModel("Hány évig uralkodott I. (Szent) István?",
-                "38 évig", "41 évig", "44 évig", "47 évig", "41 évig"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó neve kapcsolódik a Halotti beszédhez?",
-                "Könyves Kálmán", "Szent László", "II. András", "I. (Szent) István", "I. (Szent) István"));
-        list.add(new KerdesModel("Hány évig uralkodott II. (Vak) Béla?",
-                "20 évig", "22 évig", "24 évig", "26 évig", "20 évig"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó uralkodott a leghosszabb ideig?",
-                "I. (Szent) István", "II. (Jász) Béla", "III. (Antiochiai) Béla", "II. András", "I. (Szent) István"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó volt a legidősebb trónra lépésekor?",
-                "Könyves Kálmán", "Szent István", "I. (Szent) László", "II. András", "Szent István"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó volt a legfiatalabb trónra lépésekor?",
-                "Könyves Kálmán", "II. (Jász) Béla", "I. (Szent) István", "I. (Szent) László", "II. (Jász) Béla"));
-        list.add(new KerdesModel("Ki volt Árpád-házi uralkodó a tatárjárás idején?",
-                "II. András", "II. Béla", "IV. Béla", "I. (Szent) István", "IV. Béla"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó volt a legfiatalabb halálkorában?",
-                "II. (Jász) Béla", "I. (Szent) István", "II. András", "II. Béla", "II. (Jász) Béla"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó neve kapcsolódik a Salamon-féle kiáltványhoz?",
-                "I. (Szent) László", "I. (Szent) István", "II. (Jász) Béla", "II. András", "II. (Jász) Béla"));
-        list.add(new KerdesModel("Ki volt az utolsó Árpád-házi király?",
-                "III. (Antiochiai) Béla", "III. (Venetoi) Béla", "IV. Béla", "II. András", "III. (Venetoi) Béla"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó uralkodott a leghosszabb ideig?",
-                "I. (Szent) István", "II. (Jász) Béla", "III. (Antiochiai) Béla", "II. András", "I. (Szent) István"));
-        list.add(new KerdesModel("Melyik Árpád-házi uralkodó neve kapcsolódik a keresztes hadjáratokhoz?",
-                "II. (Jász) Béla", "II. András", "I. (Szent) László", "III. (Venetoi) Béla", "I. (Szent) László"));
+    private void Tema_petofi() {
+        list.add(new KerdesModel("Mely évben született Petőfi Sándor?",
+                "1823-ban", "1830-ban", "1840-ben", "1823-ban", "1823-ban"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse lett a magyar nemzeti himnusz?",
+                "Nemzeti dal", "János vitéz", "Talpra magyar", "Apa Lajos", "Talpra magyar"));
+        list.add(new KerdesModel("Melyik évben tűnt el nyomtalanul Petőfi Sándor?",
+                "1849-ben", "1850-ben", "1856-ban", "1849-ben", "1849-ben"));
+        list.add(new KerdesModel("Melyik évben nyilvánították meg Petőfi Sándor költői műveit nemzeti kincsnek?",
+                "1848-ban", "1850-ben", "1867-ben", "1848-ban", "1848-ban"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse kezdődik a következő sorokkal: „A Tiszán innen, Dunán túl…”?",
+                "Az apostol", "Nemzeti dal", "János vitéz", "Talpra magyar", "Nemzeti dal"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor versében található a „Szép vagy, mint egy gyöngyvirág…” sor?",
+                "Szeptember végén", "A helység kalapácsa", "A párbaj", "Az apostol", "Szeptember végén"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor versében található a „Szabadság, szerelem…” sor?",
+                "Talpra magyar", "Nemzeti dal", "A gavallér", "A helység kalapácsa", "Nemzeti dal"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse kezdődik a következő sorokkal: „Esténként, ha bolyongok…\"",
+                "Esti dal", "János vitéz", "Nemzeti dal", "Szeptember végén", "Esti dal"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse kezdődik a következő sorokkal: „Szép vagy, mint a hajnalcsillag…”?",
+                "A gavallér", "Nemzeti dal", "Talpra magyar", "Az apostol", "A gavallér"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor versében található a „Szemben a nap alatt…” sor?",
+                "Az apostol", "Szeptember végén", "A helység kalapácsa", "Az ifjúság kora", "Szeptember végén"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse kezdődik a következő sorokkal: „Rózsám, rózsám…”?",
+                "Az ifjúság kora", "Az apostol", "A gavallér", "A helység kalapácsa", "Az ifjúság kora"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor versében található a „Fönn a magas hegyeken…” sor?",
+                "Az ifjúság kora", "A gavallér", "Az apostol", "Szeptember végén", "Az ifjúság kora"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse kezdődik a következő sorokkal: „Mikor a madarak…”?",
+                "A helység kalapácsa", "Szeptember végén", "Az apostol", "Az ifjúság kora", "A helység kalapácsa"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor versében található a „Hogyha rózsát adnál…” sor?",
+                "Az apostol", "Az ifjúság kora", "Szeptember végén", "A gavallér", "Az apostol"));
+        list.add(new KerdesModel("Melyik Petőfi Sándor verse kezdődik a következő sorokkal: „Szomorú vagyok, mint a tavaszi eső…”?",
+                "Nemzeti dal", "Szeptember végén", "Az ifjúság kora", "Az apostol", "Szeptember végén"));
     }
-
-
-    private void Tema_Magyar_allamalapitas() {
-        list.add(new KerdesModel("Ki volt Magyarország első fejedelme?",
-                "Árpád", "Koppány", "Lehel", "Zoltán", "Árpád"));
-        list.add(new KerdesModel("Mikor alapították a magyar államot?",
-                "895", "955", "1000", "1055", "895"));
-        list.add(new KerdesModel("Melyik évben született Szent István, Magyarország első királya?",
-                "969", "975", "988", "1001", "969"));
-        list.add(new KerdesModel("Milyen vallást hozott Magyarországra Szent István?",
-                "Kereszténység", "Iszlám", "Pogány hit", "Zsidó hit", "Kereszténység"));
-        list.add(new KerdesModel("Mi volt Szent István uralkodásának kezdeti jellegzetessége?",
-                "Államalapítás", "Törzsi társadalom", "Abszolút monarchia", "Demokrácia", "Államalapítás"));
-        list.add(new KerdesModel("Melyik évben szentelték fel Szent István királyt?",
-                "1000", "1001", "1002", "1003", "1000"));
-        list.add(new KerdesModel("Melyik évben temették el Szent István királyt?",
-                "1038", "1040", "1050", "1063", "1038"));
-        list.add(new KerdesModel("Mikor nyerte vissza Magyarország az önállóságát a török uralom alól?",
-                "1686", "1699", "1711", "1725", "1686"));
-        list.add(new KerdesModel("Melyik király uralma alatt került sor a kunok betelepítésére?",
-                "II. András", "IV. Béla", "I. (Szent) István", "I. Károly", "II. András"));
-        list.add(new KerdesModel("Melyik magyar király irányításával alakult ki a kettős államszervezet?",
-                "III. Béla", "IV. Béla", "I. (Szent) László", "II. András", "IV. Béla"));
-        list.add(new KerdesModel("Melyik király korában vált a magyar királyi hatalom véglegessé a 12. században?",
-                "IV. Béla", "III. Béla", "II. András", "I. (Szent) István", "IV. Béla"));
-        list.add(new KerdesModel("Melyik magyar király irányításával alakult ki a kettős államszervezet?",
-                "III. Béla", "IV. Béla", "I. (Szent) László", "II. András", "IV. Béla"));
-        list.add(new KerdesModel("Ki volt a III. Béla által alapított oktatási intézmények egyikének névadója?",
-                "Gellért", "Árpád", "Esztergom", "Vajk", "Gellért"));
-        list.add(new KerdesModel("Melyik magyar király irányításával alakult ki a kettős államszervezet?",
-                "III. Béla", "IV. Béla", "I. (Szent) László", "II. András", "IV. Béla"));
-        list.add(new KerdesModel("Ki volt a III. Béla által alapított oktatási intézmények egyikének névadója?",
-                "Gellért", "Árpád", "Esztergom", "Vajk", "Gellért"));
-
-
-    }
-
-    private void Tema_Hunok() {
-        list.add(new KerdesModel("Ki volt a hunok legendás vezére?",
-                "Attila", "Bleda", "Ruga", "Árpád", "Attila"));
-        list.add(new KerdesModel("Hol volt Attila hun birodalmának fővárosa?",
-                "Buda", "Róma", "Konstantinápoly", "Németalföld", "Németalföld"));
-        list.add(new KerdesModel("Melyik évben hunok dúlták fel Rómát?",
-                "410", "452", "476", "489", "452"));
-        list.add(new KerdesModel("Hogyan nevezik a hunok által alkotott aranyszarvú leletet?",
-                "Aranybulla", "Szent Korona", "Nagy Kán aranyja", "Maros Vára", "Nagy Kán aranyja"));
-        list.add(new KerdesModel("Melyik birodalommal szövetkeztek a hunok a rómaiak elleni harcban?",
-                "Görög", "Persza", "Vandál", "Gót", "Gót"));
-        list.add(new KerdesModel("Ki volt a hunok hírhedt vereségét elszenvedő római császár?",
-                "Augustus", "Julius Caesar", "Valentinianus", "Marcus Aurelius", "Valentinianus"));
-        list.add(new KerdesModel("Milyen volt a hunok harci technikája?",
-                "Lándzsás lovagok", "Gyalogos rohamcsapatok", "Íjász íjászok", "Páncélos lovagok", "Íjász íjászok"));
-        list.add(new KerdesModel("Milyen volt a hunok fővárosának körülményei?",
-                "Kővár", "Fapalota", "Kaszárnya", "Falusi házak", "Fapalota"));
-        list.add(new KerdesModel("Mi volt a hun birodalom jellegzetes hadszíne?",
-                "Piros", "Fekete", "Sárga", "Kék", "Sárga"));
-        list.add(new KerdesModel("Hogyan nevezik a hunok harci lovaikat?",
-                "Tarpan", "Akhal-Teke", "Ló", "Közönséges paripa", "Akhal-Teke"));
-        list.add(new KerdesModel("Melyik törzs állt a hunok legyőzésének élére?",
-                "Római", "Gót", "Szkíta", "Frank", "Frank"));
-        list.add(new KerdesModel("Mi volt a hunok fő ellensége a rómaiakon kívül?",
-                "Szkíta", "Gót", "Vandál", "Frank", "Szkíta"));
-        list.add(new KerdesModel("Melyik helyen volt a hunok vezérközpontja?",
-                "Közép-Ázsia", "Dunántúl", "Szíria", "Anatólia", "Közép-Ázsia"));
-        list.add(new KerdesModel("Mik voltak a hunok fegyverei?",
-                "Tőr", "Csákány", "Isten ostora", "Lovagi páncél", "Isten ostora"));
-        list.add(new KerdesModel("Melyik város volt a legjelentősebb hun település?",
-                "Szeged", "Szombathely", "Pécs", "Aquincum", "Aquincum"));
-    }
-
 }

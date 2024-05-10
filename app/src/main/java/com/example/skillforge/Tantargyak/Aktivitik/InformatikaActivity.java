@@ -28,16 +28,14 @@ public class InformatikaActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
-/*
-        list.add(new TemakorModel("TT"));
-        list.add(new TemakorModel("Magyar államalapítás"));
-        list.add(new TemakorModel("Árpád-ház"));
-        list.add(new TemakorModel("Hunyadiak"));
-        list.add(new TemakorModel("1956-os forradalom és szabadságharc"));
-        list.add(new TemakorModel("Első Világháború"));
-        list.add(new TemakorModel("Második Világháború"));
 
-*/
+        list.add(new TemakorModel("Algoritmusok és adatszerkezetek","Informatika"));
+        list.add(new TemakorModel("Mesterséges intelligencia és gépi tanulás","Informatika"));
+        list.add(new TemakorModel("Adatbázisrendszerek és adatkezelés","Informatika"));
+        list.add(new TemakorModel("Hálózati technológiák és számítógép-hálózatok","Informatika"));
+        list.add(new TemakorModel("Operációs rendszerek és rendszermenedzsment","Informatika"));
+        list.add(new TemakorModel("Biztonság és adatvédelem az informatikában","Informatika"));
+        list.add(new TemakorModel("Webfejlesztés és alkalmazások tervezése","Informatika"));
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);
 

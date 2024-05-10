@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.example.skillforge.Aktivitik.PontActivity;
 import com.example.skillforge.R;
+import com.example.skillforge.Tantargyak.Aktivitik.TortenelemActivity;
 import com.example.skillforge.Tantargyak.Model.KerdesModel;
 import com.example.skillforge.databinding.ActivityKerdesekBinding;
 import java.util.ArrayList;
@@ -134,7 +135,7 @@ public class TortenelemKerdesek extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Újra kezdeti a kérdésekkel
-                    Intent intent = new Intent(TortenelemKerdesek.this, TortenelemKerdesek.class);
+                    Intent intent = new Intent(TortenelemKerdesek.this, TortenelemActivity.class);
                     startActivity(intent);
                     finish();
                 }

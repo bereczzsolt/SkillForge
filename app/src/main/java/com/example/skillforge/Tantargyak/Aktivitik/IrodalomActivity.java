@@ -28,10 +28,14 @@ public class IrodalomActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
-/*
-        list.add(new TemakorModel("OOO"));
-        list.add(new TemakorModel("Magyar államalapítás"));
-*/
+        // Témák listához adása
+        list.add(new TemakorModel("Petőfi Sándor", "Irodalom"));
+        list.add(new TemakorModel("Jókai Mór", "Irodalom"));
+        list.add(new TemakorModel("Ady Endre", "Irodalom"));
+        list.add(new TemakorModel("Kosztolányi Dezső", "Irodalom"));
+        list.add(new TemakorModel("Móricz Zsigmond", "Irodalom"));
+        list.add(new TemakorModel("Karinthy Frigyes", "Irodalom"));
+        list.add(new TemakorModel("Szabó Magda ", "Irodalom"));
 
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);

@@ -12,7 +12,7 @@ import com.example.skillforge.databinding.ActivityNyelvtanBinding;
 import java.util.ArrayList;
 
 public class NyelvtanActivity extends AppCompatActivity {
-/*
+
     ActivityNyelvtanBinding binding;
     ArrayList<TemakorModel> list;
 
@@ -30,9 +30,14 @@ public class NyelvtanActivity extends AppCompatActivity {
         binding.TemakorokRecy.setLayoutManager(linearLayoutManager);
 
 
-        list.add(new TemakorModel("Első Világháború"));
-        list.add(new TemakorModel("Második Világháború"));
-
+   // Témák listához adása
+        list.add(new TemakorModel("Főnevek és főnévkifejezések", "Nyelvtan"));
+        list.add(new TemakorModel("Igeidők és igemódok", "Nyelvtan"));
+        list.add(new TemakorModel("Melléknevek és mellékmondatok", "Nyelvtan"));
+        list.add(new TemakorModel("Határozószók és határozói mellékmondatok", "Nyelvtan"));
+        list.add(new TemakorModel("Igenevek és igekötők", "Nyelvtan"));
+        list.add(new TemakorModel("Szófajok és szószerkezetek", "Nyelvtan"));
+        list.add(new TemakorModel("Mondattan és mondatfajták", "Nyelvtan"));
 
         Temakorok temak = new Temakorok(this, list);
         binding.TemakorokRecy.setAdapter(temak);
@@ -42,5 +47,4 @@ public class NyelvtanActivity extends AppCompatActivity {
     }
 }
 
- */
-}
+
